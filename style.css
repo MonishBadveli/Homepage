@@ -1,1 +1,466 @@
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6rem;
+  }
+  
+  .about-me {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  
+    .shadow-container {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      filter: drop-shadow(0 0 0.5rem grey);
+  
+      .background-container {
+        width: 100%;
+        height: 100%;
+        background-color: #3890b0;
+        clip-path: polygon(0 0, 100% 0, 100% calc(100% - 22vw), 0 100%);
+      }
+    }
+  
+    .content-container {
+      max-width: min(88%, 78rem);
+      margin: 8rem 0 6rem 0;
+      padding: 2.5rem;
+      z-index: 1;
+      background-color: #ffffff;
+      box-shadow: 0.1rem 0.1rem 1rem grey;
+  
+      .float-container {
+        position: relative;
+        float: left;
+        width: 43%;
+        height: 100%;
+        margin-right: 1.75rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+  
+        .image-container {
+          scale: 1.65;
+          transform-origin: calc(50% + 2rem) 50%;
+          width: 66%;
+          aspect-ratio: 0.93;
+          display: flex;
+          justify-content: center;
+          container-type: size;
+          box-shadow: 0rem 0rem 1rem grey;
+  
+          img {
+            align-self: center;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+  
+          h1 {
+            position: absolute;
+            align-self: flex-end;
+            color: #ffffff;
+            font-family: "Playfair Display", serif;
+            font-size: 13cqw;
+            font-weight: 400;
+            text-shadow: rgb(71, 70, 70) 0 0.125rem 0.25rem;
+          }
+        }
+      }
+  
+      h2 {
+        margin-bottom: 1.75rem;
+        font-family: "Playfair Display", serif;
+        font-size: 3rem;
+        font-weight: 400;
+      }
+  
+      p {
+        margin-bottom: 4rem;
+        color: #5c5b59;
+        font-family: "Roboto", sans-serif;
+        font-size: 1.5rem;
+        font-weight: 350;
+        line-height: 2.25rem;
+      }
+  
+      .link-container {
+        margin-bottom: -0.5rem;
+        display: flex;
+        justify-content: flex-end;
+        gap: 1.5rem;
+  
+        img {
+          width: 2.25rem;
+          height: auto;
+        }
+      }
+    }
+  }
+  
+  .my-work {
+    max-width: min(88%, 78rem);
+    margin-bottom: 2rem;
+  
+    h2 {
+      margin-bottom: 0.875rem;
+      font-family: "Playfair Display", serif;
+      font-size: 3rem;
+      font-weight: 400;
+    }
+  
+    .project-container {
+      display: grid;
+      grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+      gap: 3.875rem 3.125rem;
+  
+      .project {
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0.1rem 0.1rem 0.75rem grey;
+  
+        .project-image {
+          width: 100%;
+          aspect-ratio: 1.4;
+          object-fit: cover;
+        }
+  
+        .info-container {
+          flex: 1;
+          padding: 0.75rem 1.625rem;
+  
+          .label-container {
+            margin-bottom: 0.9375rem;
+            display: flex;
+            gap: 1.25rem;
+  
+            h3 {
+              margin-right: auto;
+              font-family: "Playfair Display", serif;
+              font-size: 1.5rem;
+              font-weight: 300;
+            }
+  
+            img {
+              width: 1.5625rem;
+            }
+          }
+  
+          p {
+            margin-bottom: 4.5rem;
+            color: #5c5b59;
+            font-family: "Roboto", sans-serif;
+            font-size: 1.0625rem;
+            font-weight: 350;
+          }
+        }
+      }
+    }
+  }
+  
+  .contact-me {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 4.25rem 0;
+    background-color: #3890b0;
+  
+    .content-container {
+      width: 88%;
+      max-width: min(88%, 78rem);
+      display: flex;
+      justify-content: space-between;
+      gap: 3rem;
+  
+      .info-container {
+        h2 {
+          margin-bottom: 1.25rem;
+          font-family: "Playfair Display", serif;
+          font-size: 3rem;
+          font-weight: 400;
+          color: #ffffff;
+        }
+  
+        .description,
+        .address {
+          margin-bottom: 2.5rem;
+          color: #ffffff;
+          font-family: "Roboto", sans-serif;
+          font-size: 1.5rem;
+          font-weight: 350;
+        }
+  
+        .phone,
+        .email {
+          display: flex;
+          gap: 1rem;
+  
+          img {
+            width: 2rem;
+            height: auto;
+          }
+  
+          p {
+            color: #ffffff;
+            font-family: "Roboto", sans-serif;
+            font-size: 1.5rem;
+            font-weight: 350;
+          }
+        }
+  
+        .phone {
+          margin-bottom: 1.25rem;
+        }
+  
+        .email {
+          margin-bottom: 2.5rem;
+        }
+  
+        .link-container {
+          display: flex;
+          gap: 2rem;
+  
+          img {
+            width: 2.875rem;
+            height: auto;
+          }
+        }
+      }
+  
+      .contact-photo {
+        flex: 1;
+        display: flex;
+        align-items: center;
+  
+        img {
+          width: 100%;
+          aspect-ratio: 1.35;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+  
+  @media (769px <= width <= 1279px) {
+    .about-me {
+      .shadow-container {
+        height: 80%;
+      }
+  
+      .content-container {
+        margin: 12rem 0 0 0;
+        max-width: min(79%, 78rem);
+  
+        .float-container {
+          margin-left: 3rem;
+          height: 21.5rem;
+          align-items: flex-end;
+  
+          .image-container {
+            width: 100%;
+            transform-origin: bottom right;
+            scale: 1.46;
+  
+            h1 {
+              align-self: auto;
+              font-size: 15.75cqw;
+              top: 3cqw;
+              left: 87cqw;
+              white-space: nowrap;
+            }
+          }
+        }
+  
+        h2 {
+          position: relative;
+          left: 3rem;
+          margin-top: 3.5rem;
+        }
+  
+        p {
+          margin-bottom: 3rem;
+        }
+  
+        .link-container {
+          display: none;
+        }
+      }
+    }
+  
+    .my-work {
+      margin-bottom: 10rem;
+      max-width: min(83%, 78rem);
+  
+      .project-container {
+        grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+      }
+    }
+  
+    .contact-me {
+      .content-container {
+        align-items: center;
+  
+        .contact-photo {
+          img {
+            aspect-ratio: 0.75;
+          }
+        }
+      }
+    }
+  }
+  
+  @media (769px <= width < 840px) {
+    .about-me {
+      .content-container {
+        .float-container {
+          .image-container {
+            h1 {
+              align-self: flex-end;
+              font-size: 17cqw;
+              top: auto;
+              left: 0.5rem;
+              white-space: wrap;
+            }
+          }
+        }
+  
+        h2 {
+          left: auto;
+        }
+      }
+    }
+  }
+  
+  @media (0 < width <= 768px) {
+    .about-me {
+      .shadow-container {
+        height: 34%;
+  
+        .background-container {
+          clip-path: polygon(0 0, 100% 0, 100% calc(100% - 50vw), 0 100%);
+        }
+      }
+  
+      .content-container {
+        padding: 0;
+        margin: 0 0 1rem 0;
+        background-color: initial;
+        box-shadow: none;
+  
+        .float-container {
+          margin-bottom: 2rem;
+          margin-right: initial;
+          width: initial;
+          height: initial;
+          float: initial;
+  
+          .image-container {
+            width: 93%;
+            aspect-ratio: 0.78;
+            scale: initial;
+  
+            h1 {
+              left: 1.5rem;
+              font-size: 23cqw;
+            }
+          }
+        }
+  
+        h2 {
+          text-align: center;
+          margin-bottom: 1rem;
+        }
+  
+        p {
+          margin-bottom: 1rem;
+        }
+  
+        .link-container {
+          justify-content: center;
+          margin-bottom: 0;
+        }
+      }
+    }
+  
+    .my-work {
+      margin-bottom: 5rem;
+  
+      h2 {
+        margin-bottom: 1.5rem;
+        text-align: center;
+      }
+  
+      .project-container {
+        grid-template: repeat(6, 1fr) / 1fr;
+      }
+    }
+  
+    .contact-me {
+      padding: 1.5rem 0 0 0;
+  
+      .content-container {
+        width: initial;
+        max-width: initial;
+        flex-direction: column;
+        justify-content: initial;
+        gap: 5.5rem;
+  
+        .info-container {
+          padding: 0 1.375rem;
+  
+          h2 {
+            text-align: center;
+            margin-bottom: 0.75rem;
+          }
+  
+          .description {
+            .line-break {
+              display: none;
+            }
+          }
+  
+          .address,
+          .phone p,
+          .email p {
+            font-size: 1.125rem;
+          }
+  
+          .phone,
+          .email {
+            img {
+              display: none;
+            }
+          }
+  
+          .phone {
+            margin-bottom: 0.5rem;
+          }
+  
+          .email {
+            margin-bottom: 1.75rem;
+          }
+  
+          .link-container {
+            justify-content: center;
+          }
+        }
+  
+        .contact-photo {
+          img {
+            aspect-ratio: 0.65;
+          }
+        }
+      }
+    }
+  }
+  
